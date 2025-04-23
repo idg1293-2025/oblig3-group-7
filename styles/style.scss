@@ -35,42 +35,58 @@ html {
         position: absolute;
         bottom: 0;
         z-index: 1;
-        opacity: 1;
         // transform: translateY(100%);
+        // transform: translateY(100%);
+    }
+    .scene-1-text {
+        background-color: white;
+        color: black;
+        font-weight: bold;
+        opacity: 0.6;
+        display: inline;
     }
 
     /* SCENE 2 */
+    .scene-2 {
+        opacity: 0;
+    }
     .ocean-does {
         width: 100%;
         height: auto;
         position: absolute;
         bottom: 0;
         z-index: 1;
-        opacity: 0;
     }
 
     /* SCENE 3 */
+    .scene-3 {
+        opacity: 0;
+    }
     .impact-below {
         width: 100%;
         height: auto;
         position: absolute;
         bottom: 0;
         z-index: 1;
-        opacity: 0;
     }
 
     /* SCENE 4 */
+    .scene-4 {
+        opacity: 0;
+    }
     .take-action {
         width: 100%;
         height: auto;
         position: absolute;
         bottom: 0;
         z-index: 1;
-        opacity: 0;
     }
 
 
 /* UTILITY CLASSES */
+.hidden {
+    opacity: 0;
+  }  
 
 //Give e.g. sand opacity 0 here, and with gsap fade it in.
 // #_1-sand {
