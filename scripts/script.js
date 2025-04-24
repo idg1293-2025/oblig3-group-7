@@ -1,73 +1,72 @@
-gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger); //tell GSAP we want to use scrollTrigger plugin
 
 gsap.from(".scene1__text", {
-  y: "-100vh",      // Start from above the viewport
-  duration: 3,      // Adjust time as needed
-  ease: "power2.out"
+  y: "-100vh",  //start above viewport
+  duration: 3,  //adjusts duration
+  ease: "power2.out"  //fast -> slow smooth stop
 });
 
-let tl = gsap.timeline ({
-  scrollTrigger: {
-    trigger: ".stage",
-    start: "top top",
-    end: "+=8000",
-    pin: true,
-    scrub: true
+let tl = gsap.timeline ({ //create timeline (tl)
+  scrollTrigger: {  //connect timeline to scroll
+    trigger: ".stage", //the element starting the chain reaction of animations
+    start: "top top", //start when it hits top of viewport
+    end: "+=8000", //set scroll distance (adjust for slower or faster animations)
+    pin: true, //pin the stage
+    scrub: true //scrolling back reverses animations (when scrub is used "duration" becomes scroll based, not time based)
   }
 })
 
-tl.to(".scene1__text", {
-  scale: 0,
-  opacity: 0,
-  duration: 1,
-  ease: "back.in(1.7)" // Nice snappy zoom
-}, 0);
+tl.to(".scene1__text", { //add animation to the timeline (tl), start from the current value of element (to), targets element being animated
+  scale: 0, //shrink the text to nothing
+  duration: 1, //define scroll distance of animation
+  ease: "back.in(2)" //predefined easing type (how an animation accelerates or decelerates) from the GSAP library, number indicates how much it zooms
+}, 0); //tells GSAP to start animation at the time 0 in the timeline (immediately)
 
 
-tl.to(["#_1-guy", "#_1-gal"], {
-  y: "120%",
-  x: "60%",
-  duration: 1
-}, 1.2);
+tl.to(["#scene1__guy", "#scene1__gal"], { //elements being animated
+  y: "120%", //move down 120% of its own height
+  x: "60%", //move right 60% of its own width
+  duration: 1 //define scroll distance of animation
+}, 1.2); //time in timeline to start animation
 
-tl.to(["#_1-water", "#_1-sand", "#_1-wave-1", "#_1-wave-2", "#_1-wave-3", "#_1-wave-4", "#_1-wave-5", "#_1-stone", "#_1-tree", "#_1-bush"], {
-  opacity: 1,
-  duration: 1
-}, 1.2); // same start time
+tl.to(["#scene1__water", "#scene1__sand", "#scene1__wave1", "#scene1__wave2", "#scene1__wave3", "#scene1__wave4", "#scene1__wave5", "#scene1__stone", "#scene1__tree", "#scene1__bush"], { //elements being targeted
+  opacity: 1, //fade in the targeted elements making them visible
+  duration: 1 //scroll duration
+}, 1.2); //start time of the animation in the timeline
 
-tl.to("#_1-sand", {
-  y: "44%",             // Move down 50% of its own height
-  duration: 0.8,        // How long the drop takes
-  repeat: 1,            // Do the animation once more (back up)
-  yoyo: true,           // Go back to starting position
-  ease: "power1.inOut"  // Smooth ease
-}, 2.3);                // Start right after background fade-in
+tl.to("#scene1__sand", { 
+  y: "44%", //move down 44% of its own height, making it look like a wave
+  duration: 0.8,
+  repeat: 1, //repeats the animation
+  yoyo: true, //in combination with repeat, makes the animation reverse direction when it repeats, going back to its original position
+  ease: "power1.inOut" //https://gsap.com/docs/v3/Eases
+}, 2.3);
 
-tl.to("#_1-shadow", {
+tl.to("#scene1__shadow", {
   opacity: 0,
   duration: 0.4,
-  ease: "power1.out"
-}, 2.6); // Bottle fade-out happens at the same time
+  ease: "power1.out" //https://gsap.com/docs/v3/Eases
+}, 2.6);
 
-tl.to("#_1-bottle", {
-  x: 600,       // Move to the right (adjust this number)
-  y: -1000,       // Move down toward the sea
-  scale: 0,   // Shrink to simulate distance
-  opacity: 0, // Optional fade
+tl.to("#scene1__bottle", {
+  x: 600,
+  y: -1000,
+  scale: 0, //shrink to simulate distance
+  opacity: 0, //fade as bottle drifts further
   duration: 3,
-  ease: "power1.out"
-}, 3.2); // Adjust this to your timeline
+  ease: "power1.out" //https://gsap.com/docs/v3/Eases
+}, 3.2);
 
 tl.to(".scene1", {
-  scale: 20,                // Zoom in
-  transformOrigin: "center center", // Zoom into middle
+  scale: 20, //amount zoomed in
+  transformOrigin: "center center", //zoom to middle
   duration: 2,
   ease: "power2.inOut"
-}, 4); // Start the zoom later in your timeline (adjust timing!)
+}, 4);
 
 
 
-
+//waves scene 1
 gsap.to([
    "#_1-wave-1",
    "#_1-wave-2",
