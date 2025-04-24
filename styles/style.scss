@@ -1,21 +1,18 @@
+/* RESET */
 * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
-html {
-    // scroll-snap-type: y mandatory;
-}
 
 /* GLOBAL */
 
 /* COMPONENTS */
-.scene {
+.stage {
     width: 100%;
     height: 100vh;
     background-color: beige;
     position: relative;
-    // scroll-snap-align: start;
 }
 .text {
     width: min(80%, 60ch);
@@ -29,7 +26,11 @@ html {
 }
 
     /* SCENE 1 */
-    .who-cares {
+    .scene1 {
+        height: 100%;
+        width: 100vw;
+    }
+    .scene1__svg {
         width: 100%;
         height: auto;
         position: absolute;
@@ -38,16 +39,23 @@ html {
         // transform: translateY(100%);
         // transform: translateY(100%);
     }
-    .scene-1-text {
-        background-color: white;
+    .scene1__text {
         color: black;
         font-weight: bold;
-        opacity: 0.6;
-        display: inline;
+        z-index: 2;
+        text-align: center;
+        font-size: 3rem;
+        position: absolute;
+        top: 20%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 16ch;
     }
 
     /* SCENE 2 */
-    .scene-2 {
+    .scene2 {
+        height: 100%;
+        width: 100vw;
         opacity: 0;
     }
     .ocean-does {
@@ -60,6 +68,8 @@ html {
 
     /* SCENE 3 */
     .scene-3 {
+        height: 100%;
+        width: 100vw;
         opacity: 0;
     }
     .impact-below {
@@ -72,6 +82,8 @@ html {
 
     /* SCENE 4 */
     .scene-4 {
+        block-size: 100%;
+        inline-size: 100vw;
         opacity: 0;
     }
     .take-action {
@@ -84,11 +96,26 @@ html {
 
 
 /* UTILITY CLASSES */
-.hidden {
+.hidden { //hide elements from the stage which we later introduce with GSAP
     opacity: 0;
-  }  
+  }
+.highlight  { //use on spans' to highlight specific words
+    background-color: red;
+    color: white;
+    padding: 0.5rem;
+}
 
-//Give e.g. sand opacity 0 here, and with gsap fade it in.
-// #_1-sand {
-//     opacity: 0;
-//   }
+  //later we can make a utility class for each scene called e.g. "cover" setting the width and height.
+
+/* MEDIA QUERIES */
+@media (max-width: 1100px) { //keep scene 1 text close to center and not overlapping the illustrations on all screen sizes.
+    .scene1__text {
+      top: 50%;
+    }
+  }
+  
+@media (min-width: 1101px) and (max-width: 1500px) { //keep scene 1 text close to center and not overlapping the illustrations on all screen sizes.
+.scene1__text {
+    top: 30%;
+}
+}
