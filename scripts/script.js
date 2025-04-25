@@ -19,6 +19,7 @@ gsap.to([
     ease: "sine.inOut"
 });
 
+/* Timeline scene 1-2 */
 let tl = gsap.timeline({ //create timeline (tl)
   scrollTrigger: {  //connect timeline to scroll
     trigger: ".stage", //the element starting the chain reaction of animations
@@ -114,6 +115,26 @@ tl.to("#scene2__people", {
 tl.from(".scene2__facts", {
   scale: 0,
 }, 9.5)
+
+
+tl.to({}, { //no target, just a pause when combined with "duration: 2"
+  duration: 2, //add a pause so text stops a bit before scrolling further
+}, 10);
+
+/* Timeline scene 3 */
+let tl2 = gsap.timeline({
+  scrollTrigger: {  
+    trigger: "#depth1",
+    start: "top top", 
+    end: "+=8000", 
+    pin: true,
+    scrub: true,
+  }
+})
+
+
+
+
 
 // tl.to(".scene2__facts", {
 //   y: "-100vh", // move it up off the screen
