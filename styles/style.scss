@@ -105,7 +105,10 @@
     }
 
      /* SCENE 3 */
-        .scene3__facts {
+    .scene3__facts {
+        position: absolute;
+        top: 50%;
+        left: 50%;
         width: min(80%, 60ch);
         padding: var(--space-2xs);
         border: 2px solid black;
@@ -113,7 +116,7 @@
         text-align: center;
         background-color: rgba(255, 255, 255, 0.95);
         transform: translate(-50%, -50%);
-        }
+    }
 
      /* SCENE 4 */
     
@@ -127,7 +130,7 @@
     background-color: red;
     color: white;
     padding: var(--space-3xs);
-    border-radius: var(--space-3xs);
+    // border-radius: var(--space-3xs);
     font-weight: bold;
 }
 
@@ -150,14 +153,14 @@
 
 
 /* MARTE */
-.ocean-top, .depth {
+.scene3__depth {
     display: grid;
     place-items: center;
     width: 100%;
     height: auto;
 }
 
-.depth img, svg, .ocean-top img, svg {
+.scene3__depth img, svg, .ocean-top img, svg {
     grid-area: 1 / 1;
     width: 100%;
 }
@@ -210,12 +213,7 @@
   }
 }
 
-.ocean-section {
-    height: 600vh; // Allows for scrolling
-    
-}
-
-.depth {
+.scene3__depth {
     width: 100%;
     height: 100vh; // Each depth section takes full viewport height
     transition: background 0.5s ease;
