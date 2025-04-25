@@ -107,6 +107,15 @@
 }
 
 /* SCENE 3 */
+.scene3__facts {
+  width: min(80%, 60ch);
+  padding: var(--space-2xs);
+  border: 2px solid black;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.95);
+  transform: translate(-50%, -50%);
+}
+
 /* SCENE 4 */
 /* UTILITY CLASSES */
 .hidden {
@@ -121,4 +130,85 @@
   font-weight: bold;
 }
 
-/* MEDIA QUERIES *//*# sourceMappingURL=style.css.map */
+/* MEDIA QUERIES */
+/* MARTE */
+.ocean-top, .depth {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: auto;
+}
+
+.depth img, svg, .ocean-top img, svg {
+  grid-area: 1/1;
+  width: 100%;
+}
+
+#_2-net, #_2-cup, #_2-litter-1, #_2-litter-2, #_2-plastic-bag-1, #_2-bottle-1, #_2-bottle-2, #_2-plastic-bag-2, .float {
+  animation: float 6s infinite ease-in-out;
+}
+
+#_2-net {
+  animation-delay: 0s;
+}
+
+#_2-cup {
+  animation-delay: 0.5s;
+}
+
+#_2-litter-1 {
+  animation-delay: 1s;
+}
+
+#_2-litter-2 {
+  animation-delay: 1.5s;
+}
+
+#_2-plastic-bag-1 {
+  animation-delay: 2s;
+}
+
+#_2-bottle-1 {
+  animation-delay: 2.5s;
+}
+
+#_2-bottle-2 {
+  animation-delay: 3s;
+}
+
+#_2-plastic-bag-2 {
+  animation-delay: 3.5s;
+}
+
+@keyframes float {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-50px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+.ocean-section {
+  height: 600vh;
+}
+
+.depth {
+  width: 100%;
+  height: 200vh;
+  transition: background 0.5s ease;
+}
+
+#depth1 {
+  background: linear-gradient(to bottom, #98e9f4, #005577);
+}
+
+#depth2 {
+  background: linear-gradient(to bottom, #005577, #003344);
+}
+
+#depth3 {
+  background: linear-gradient(to bottom, #003344, #000a13);
+}/*# sourceMappingURL=style.css.map */

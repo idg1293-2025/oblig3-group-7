@@ -114,3 +114,9 @@ tl.to("#scene2__people", {
 tl.from(".scene2__facts", {
   scale: 0,
 }, 9.5)
+
+// tl.to(".scene2__facts", {
+//   y: "-100vh", // move it up off the screen
+//   opacity: 0,  // optional: fade out as it leaves
+//   duration: 2,
+// }, 10.5);
