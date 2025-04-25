@@ -1,0 +1,181 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+html {
+    // scroll-snap-type: y mandatory;
+}
+
+/* GLOBAL */
+
+/* COMPONENTS */
+.scene {
+    width: 100%;
+    height: 100vh;
+    background-color: beige;
+    position: relative;
+    // scroll-snap-align: start;
+}
+.text {
+    width: min(80%, 60ch);
+    background-color: white;
+    border: 1px solid black;
+    margin-inline: auto;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+    /* SCENE 1 */
+    .who-cares {
+        width: 100%;
+        height: auto;
+        position: absolute;
+        bottom: 0;
+        z-index: 1;
+        // transform: translateY(100%);
+        // transform: translateY(100%);
+    }
+    .scene-1-text {
+        background-color: white;
+        color: black;
+        font-weight: bold;
+        opacity: 0.6;
+        display: inline;
+    }
+
+    /* SCENE 2 */
+    .scene-2 {
+        opacity: 0;
+    }
+    .ocean-does {
+        width: 100%;
+        height: auto;
+        position: absolute;
+        bottom: 0;
+        z-index: 1;
+    }
+
+    /* SCENE 3 */
+    .scene-3 {
+        opacity: 0;
+    }
+    .impact-below {
+        width: 100%;
+        height: auto;
+        position: absolute;
+        bottom: 0;
+        z-index: 1;
+    }
+
+    /* SCENE 4 */
+    .scene-4 {
+        opacity: 0;
+    }
+    .take-action {
+        width: 100%;
+        height: auto;
+        position: absolute;
+        bottom: 0;
+        z-index: 1;
+    }
+
+
+/* UTILITY CLASSES */
+.hidden {
+    opacity: 0;
+  }  
+
+//Give e.g. sand opacity 0 here, and with gsap fade it in.
+// #_1-sand {
+//     opacity: 0;
+//   }
+
+
+
+.ocean-top, .depth {
+    display: grid;
+    place-items: center;
+    width: 100%;
+    height: auto;
+}
+
+.depth img, svg, .ocean-top img, svg {
+    grid-area: 1 / 1;
+    width: 100%;
+}
+
+#_2-net, #_2-cup, #_2-litter-1, #_2-litter-2, #_2-plastic-bag-1, #_2-bottle-1, #_2-bottle-2, #_2-plastic-bag-2, .float {
+    animation: float 6s infinite ease-in-out;
+}
+
+#_2-net {
+    animation-delay: 0s;
+}
+
+#_2-cup {
+    animation-delay: 0.5s;
+}
+
+#_2-litter-1 {
+    animation-delay: 1s;
+}
+
+#_2-litter-2 {
+    animation-delay: 1.5s;
+}
+
+#_2-plastic-bag-1 {
+    animation-delay: 2s;
+}
+
+#_2-bottle-1 {
+    animation-delay: 2.5s;
+}
+
+#_2-bottle-2 {
+    animation-delay: 3s;
+}
+
+#_2-plastic-bag-2 {
+    animation-delay: 3.5s;
+}
+
+@keyframes float {
+    0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-50px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.ocean-section {
+    height: 600vh; // Allows for scrolling
+    
+}
+
+.depth {
+    width: 100%;
+    height: 200vh; // Each depth section takes full viewport height
+    transition: background 0.5s ease;
+}
+
+#depth1 {
+    background: linear-gradient(to bottom, #98e9f4, #005577); // Light to dark blue
+}
+
+#depth2 {
+    
+    background: linear-gradient(to bottom, #005577, #003344); // Darker blue
+}
+
+#depth3 {
+    
+    background: linear-gradient(to bottom, #003344, #000a13); // Even darker blue
+}
