@@ -1,6 +1,6 @@
 gsap.registerPlugin(ScrollTrigger); //tell GSAP we want to use scrollTrigger plugin
 
-gsap.from(".scene1__text", {
+gsap.from(".scene1__text", { //target, animate from -> to its original position
   y: "-100vh",  //start above viewport
   duration: 3,  //adjusts duration
   ease: "power2.out",  //fast -> slow smooth stop
@@ -11,12 +11,21 @@ gsap.to([
   "#scene1__wave2",
   "#scene1__wave3",
   "#scene1__wave4",
-  "#scene1__wave5"], {
+  "#scene1__wave5"], { //targeted elememts
     y: -18,
     duration: 1.5,
     repeat: -1,
     yoyo: true,
     ease: "sine.inOut"
+});
+
+gsap.to("#depth3__fin", {
+  rotation: 10, //wiggle degrees
+  transformOrigin: "left center", //wiggle pivot points
+  yoyo: true, //go back and forth
+  repeat: -1, //infinite loop
+  duration: 1,
+  ease: "power1.inOut", //smooth movement
 });
 
 /* Timeline scene 1-2 */
@@ -90,7 +99,7 @@ tl.to(".scene1", {
 
 tl.set(".scene1", {
   display: "none",
-}, 8.2); // after fade completes
+}, 7); // after fade completes
 
 tl.to(".scene2", {
   opacity: 1,
@@ -117,7 +126,7 @@ tl.from(".scene2__facts", {
 }, 9.5);
 
 tl.to({}, { //no target, just a pause when combined with "duration: 2"
-  duration: 2, //add a pause so text stops a bit before scrolling further
+  duration: 1, //add a pause so text stops a bit before scrolling further
 }, 10);
 
 /* Timeline scene 3 */
@@ -141,7 +150,7 @@ let tl3 = gsap.timeline({
   scrollTrigger: {  
     trigger: "#scene3__depth3",
     start: "top top", 
-    end: "+=4000", 
+    end: "+=8000", 
     pin: true,
     scrub: true,
   }
@@ -149,58 +158,62 @@ let tl3 = gsap.timeline({
 
 tl3.from("#depth3__rock1", {
   x: "-100%",
-});
+  duration: 1,
+}, 0);
 
 tl3.from("#depth3__rock2", {
   x: "100%",
-});
+  duration: 1,
+}, 0);
 
 tl3.from("#depth3__sand", {
   y: "100%",
-});
+  duration: 2,
+}, 0.5);
 
 tl3.from("#depth3__algae1", {
   y: "110%",
-});
+  duration: 1,
+}, 1);
 
 tl3.from("#depth3__algae2", {
   y: "110%",
-});
+  duration: 1,
+}, 1.5);
 
 tl3.from("#depth3__turtle", {
   x: "-100%",
   y: "-100%",
-  duration: 10,
-});
+  duration: 4,
+  ease: "power4.out",
+}, 2);
 
 tl3.from("#depth3__fish", {
   x: "100%",
-  duration: 10,
-});
+  duration: 4,
+  ease: "power4.out",
+}, 2.5);
 
+tl3.from(".scene3__facts2", {
+  scale: 0,
+  duration: 4,
+}, 3.5);
 
+tl3.to("#depth3__turtle", {
+  x: "100%",
+  y: "-100%",
+  duration: 4,
+}, 8.5);
 
-tl3.to({}, { //no target, just a pause when combined with "duration: 2"
-  duration: 10, //add a pause so text stops a bit before scrolling further
-}, 10);
+tl3.to("#depth3__fish", {
+  x: "-100%",
+  y: "-50%",
+  duration: 4,
+}, 9.8);
 
-
-gsap.to("#depth3__fin", {
-  rotation: 10,       // Wiggle 15 degrees
-  transformOrigin: "left center", // Pivot point for the wiggle
-  yoyo: true,         // Go back and forth
-  repeat: -1,         // Infinite loop
-  duration: 1,      // 0.5 seconds each way
-  ease: "power1.inOut" // Smooth movement
-});
-
-
-
-
-
-
-// tl.to(".scene2__facts", {
-//   y: "-100vh", // move it up off the screen
-//   opacity: 0,  // optional: fade out as it leaves
-//   duration: 2,
-// }, 10.5);
+tl3.to("#scene3__depth3", {
+  scale: 18, // zoom in 2x
+  transformOrigin: "center bottom",
+  duration: 3,
+  ease: "power2.in", // smooth zoom
+}, 12.4);
