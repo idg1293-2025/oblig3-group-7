@@ -164,6 +164,7 @@
   position: absolute;
   top: 50%;
   left: 50%;
+  z-index: 1;
   width: min(80%, 60ch);
   padding: var(--space-2xs);
   border: 2px solid black;
