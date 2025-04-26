@@ -28,7 +28,7 @@ let tl = gsap.timeline({ //create timeline (tl)
     pin: true, //pin the stage
     scrub: true, //scrolling back reverses animations (when scrub is used "duration" becomes scroll based, not time based)
   }
-})
+});
 
 tl.to(".scene1__text", { //add animation to the timeline (tl), start from the current value of element (to), targets element being animated
   scale: 0, //shrink the text to nothing
@@ -110,12 +110,11 @@ tl.to("#scene2__people", {
   scale: 0,
   transformOrigin: "left center",
   duration: 1.5,
-}, 8.5)
+}, 8.5);
 
 tl.from(".scene2__facts", {
   scale: 0,
-}, 9.5)
-
+}, 9.5);
 
 tl.to({}, { //no target, just a pause when combined with "duration: 2"
   duration: 2, //add a pause so text stops a bit before scrolling further
@@ -124,13 +123,77 @@ tl.to({}, { //no target, just a pause when combined with "duration: 2"
 /* Timeline scene 3 */
 let tl2 = gsap.timeline({
   scrollTrigger: {  
-    trigger: "#depth1",
+    trigger: "#scene3__depth1",
     start: "top top", 
-    end: "+=8000", 
+    end: "+=2000", 
     pin: true,
     scrub: true,
   }
-})
+});
+
+tl2.to("#depth__bubble", {
+  y: "-100vh",    // move up far out of screen
+  duration: 2,    // speed
+  ease: "power1.inOut", // fast → slow → fast
+}, 0);            // start immediately at time 0
+
+let tl3 = gsap.timeline({
+  scrollTrigger: {  
+    trigger: "#scene3__depth3",
+    start: "top top", 
+    end: "+=4000", 
+    pin: true,
+    scrub: true,
+  }
+});
+
+tl3.from("#depth3__rock1", {
+  x: "-100%",
+});
+
+tl3.from("#depth3__rock2", {
+  x: "100%",
+});
+
+tl3.from("#depth3__sand", {
+  y: "100%",
+});
+
+tl3.from("#depth3__algae1", {
+  y: "110%",
+});
+
+tl3.from("#depth3__algae2", {
+  y: "110%",
+});
+
+tl3.from("#depth3__turtle", {
+  x: "-100%",
+  y: "-100%",
+  duration: 10,
+});
+
+tl3.from("#depth3__fish", {
+  x: "100%",
+  duration: 10,
+});
+
+
+
+tl3.to({}, { //no target, just a pause when combined with "duration: 2"
+  duration: 10, //add a pause so text stops a bit before scrolling further
+}, 10);
+
+
+gsap.to("#depth3__fin", {
+  rotation: 10,       // Wiggle 15 degrees
+  transformOrigin: "left center", // Pivot point for the wiggle
+  yoyo: true,         // Go back and forth
+  repeat: -1,         // Infinite loop
+  duration: 1,      // 0.5 seconds each way
+  ease: "power1.inOut" // Smooth movement
+});
+
 
 
 

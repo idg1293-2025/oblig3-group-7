@@ -105,7 +105,57 @@
     }
 
      /* SCENE 3 */
-    .scene3__facts {
+    // .scene3__depth {
+    //     position: relative;
+    // } Generate bubbles that float all the way from below depth3 to the top of depth1
+    .scene3__depth {
+        position: relative;
+        width: 100%;
+        height: 100vh; // Each depth section takes full viewport height
+        transition: background 0.5s ease;
+    }
+    #depth__bubble {
+        width: 100%;
+        height: auto;
+    }
+    .scene3__facts1 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: min(80%, 60ch);
+        padding: var(--space-2xs);
+        border: 2px solid black;
+        //font size
+        text-align: center;
+        background-color: rgba(255, 255, 255, 0.95);
+        transform: translate(-50%, -50%);
+    }
+    #depth3__turtle {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        z-index: 1;
+    }
+    #scene3__svg {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+    }
+    #depth3__trash {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100vw;
+    }
+    #depth3__fish {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100vw;
+    }
+    .scene3__facts2 {
         position: absolute;
         top: 50%;
         left: 50%;
@@ -118,12 +168,33 @@
         transform: translate(-50%, -50%);
     }
 
+
+
+    // #depth3__rock1 {
+    //     position: absolute;
+    //     bottom: 0;
+    //     left: 0;
+    //     width: 40vw;
+    //     height: auto;
+    // }
+    // #depth3__rock2 {
+    //     position: absolute;
+    //     bottom: 0;
+    //     right: 0;
+    //     width: 40vw;
+    //     height: auto;
+    // }
+
+
+
+
+
      /* SCENE 4 */
     
 
 
 /* UTILITY CLASSES */
-.hidden { //hide elements from the stage which we later introduce with GSAP
+.hidden { //hide elements from the stage that are later introduce with GSAP
     opacity: 0;
   }
 .highlight  { //use on spans' to highlight specific words
@@ -153,18 +224,6 @@
 
 
 /* MARTE */
-.scene3__depth {
-    display: grid;
-    place-items: center;
-    width: 100%;
-    height: auto;
-}
-
-.scene3__depth img, svg, .ocean-top img, svg {
-    grid-area: 1 / 1;
-    width: 100%;
-}
-
 #scene2__net, #scene2__cup, #scene2__litter1, #scene2__litter2, #scene2__plasticbag2, #scene2__bottle1, #scene2__bottle2, #scene2__plasticbag1, .float {
     animation: float 6s infinite ease-in-out;
 }
@@ -213,22 +272,20 @@
   }
 }
 
-.scene3__depth {
-    width: 100%;
-    height: 100vh; // Each depth section takes full viewport height
-    transition: background 0.5s ease;
-}
 
-#depth1 {
+
+#scene3__depth1 {
     background: linear-gradient(to bottom, #98e9f4, #005577); // Light to dark blue
 }
 
-#depth2 {
+#scene3__depth2 {
     
     background: linear-gradient(to bottom, #005577, #003344); // Darker blue
 }
 
-#depth3 {
+#scene3__depth3 {
     
     background: linear-gradient(to bottom, #003344, #000a13); // Even darker blue
 }
+
+//add titles to svgs maby?
