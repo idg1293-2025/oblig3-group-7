@@ -66,6 +66,34 @@ document.querySelectorAll("#_4-bottle-wave-2, #_4-cup-wave, #_4-plastic-bag, #_4
   });
 });
 
+// Showing sparkles when rubbish is clicked away
+function showSparkle(trashId, sparkleId) {
+  const trash = document.getElementById(trashId);
+  const sparkle = document.getElementById(sparkleId);
+
+  if (!trash || !sparkle) return;
+
+  // Finding middle of trash group in SVG coordinates
+  const bbox = trash.getBBox();
+  const centerX = bbox.x + bbox.width / 2;
+  const centerY = bbox.y + bbox.height / 2;
+
+  // Width and height of sparkles from SVG attributes
+  const sparkleWidth = +sparkle.getAttribute("width");
+  const sparkleHeight = +sparkle.getAttribute("height");
+
+  // Center the sparkles over trash
+  sparkle.setAttribute("x", centerX - sparkleWidth / 2);
+  sparkle.setAttribute("y", centerY - sparkleHeight / 2);
+  sparkle.setAttribute("visibility", "visible");
+
+  // Hide again after 800ms
+  setTimeout(() => {
+    sparkle.setAttribute("visibility", "hidden");
+  }, 800);
+}
+
+
 // Popup message after all rubbish is removed
 const trashItems = document.querySelectorAll('.rubbish');
 const totalTrash = trashItems.length;

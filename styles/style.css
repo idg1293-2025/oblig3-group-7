@@ -240,6 +240,30 @@
   width: 15ch;
 }
 
+#gal_garbage-bag {
+  transform-origin: center top;
+}
+#gal_garbage-bag:hover {
+  animation: swing 0.6s ease-in-out 1;
+}
+
+@keyframes swing {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(0.25deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(-0.25deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
 #congrats {
   display: none;
   position: absolute;
