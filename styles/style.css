@@ -13,36 +13,65 @@
   --step-0: clamp(2rem, 1.8158rem + 0.8421vw, 2.5rem);
   --step-1: clamp(2.4rem, 2.1329rem + 1.2211vw, 3.125rem);
   --step-2: clamp(2.88rem, 2.5019rem + 1.7284vw, 3.9063rem);
-  --step-3: clamp(3.456rem, 2.9303rem + 2.4031vw, 4.8828rem);
-  --step-4: clamp(4.1472rem, 3.4265rem + 3.2948vw, 6.1035rem);
-  --step-5: clamp(4.9766rem, 3.9993rem + 4.4678vw, 7.6294rem);
   --space-3xs: clamp(0.5rem, 0.4539rem + 0.2105vw, 0.625rem);
   --space-2xs: clamp(1rem, 0.9079rem + 0.4211vw, 1.25rem);
   --space-xs: clamp(1.5rem, 1.3618rem + 0.6316vw, 1.875rem);
   --space-s: clamp(2rem, 1.8158rem + 0.8421vw, 2.5rem);
-  --space-m: clamp(3rem, 2.7237rem + 1.2632vw, 3.75rem);
-  --space-l: clamp(4rem, 3.6316rem + 1.6842vw, 5rem);
-  --space-xl: clamp(6rem, 5.4474rem + 2.5263vw, 7.5rem);
-  --space-2xl: clamp(8rem, 7.2632rem + 3.3684vw, 10rem);
-  --space-3xl: clamp(12rem, 10.8947rem + 5.0526vw, 15rem);
+  background-color: beige;
 }
 
 /* GLOBAL */
-/* Fredoka font from Google Fonts */
 * {
   font-family: "Fredoka", sans-serif;
   font-optical-sizing: auto;
   font-weight: 500;
   font-style: normal;
-  /*font-size: 40px;*/
   font-variation-settings: "wdth" 100;
+}
+
+/* UTILITY CLASSES */
+.hidden {
+  opacity: 0;
+}
+
+.highlight {
+  background-color: red;
+  color: white;
+  padding: var(--space-3xs);
+  font-weight: bold;
+}
+
+.text-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  padding: var(--space-2xs);
+  font-size: var(--step-0);
+  line-height: 1.3;
+  text-align: center;
+  color: black;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: var(--space-2xs);
+  transform: translate(-50%, -50%);
+}
+
+.fact-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: min(80%, 60ch);
+  padding: var(--space-2xs);
+  border: 2px solid black;
+  font-size: var(--step--2);
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.95);
+  transform: translate(-50%, -50%);
 }
 
 /* COMPONENTS */
 .stage {
   width: 100%;
   height: 100vh;
-  background-color: beige;
   position: relative;
 }
 
@@ -53,18 +82,7 @@
 }
 
 .scene1__text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
   width: 17ch;
-  padding: var(--space-2xs);
-  font-size: var(--step-0);
-  line-height: 1.3;
-  text-align: center;
-  color: black;
-  background-color: rgba(255, 255, 255, 0.8);
-  border-radius: var(--space-2xs);
-  transform: translate(-50%, -50%);
 }
 
 .scene1__svg {
@@ -84,18 +102,7 @@
 }
 
 .scene2__text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
   width: 18ch;
-  padding: var(--space-2xs);
-  font-size: var(--step-0);
-  line-height: 1.3;
-  text-align: center;
-  color: black;
-  background-color: rgba(255, 255, 255, 0.8);
-  border-radius: var(--space-2xs);
-  transform: translate(-50%, -50%);
 }
 
 .scene2__svg {
@@ -103,18 +110,6 @@
   height: auto;
   position: absolute;
   bottom: 0;
-}
-
-.scene2__facts {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: min(80%, 60ch);
-  padding: var(--space-2xs);
-  border: 2px solid black;
-  text-align: center;
-  background-color: rgba(255, 255, 255, 0.95);
-  transform: translate(-50%, -50%);
 }
 
 #scene2__net, #scene2__cup, #scene2__litter1, #scene2__litter2, #scene2__plasticbag2, #scene2__bottle1, #scene2__bottle2, #scene2__plasticbag1, .float {
@@ -189,18 +184,6 @@
   height: auto;
 }
 
-.scene3__facts1 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: min(80%, 60ch);
-  padding: var(--space-2xs);
-  border: 2px solid black;
-  text-align: center;
-  background-color: rgba(255, 255, 255, 0.95);
-  transform: translate(-50%, -50%);
-}
-
 #depth3__turtle {
   position: absolute;
   bottom: 0;
@@ -220,27 +203,18 @@
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 100vw;
+  width: 100%;
 }
 
 #depth3__fish {
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 100vw;
+  width: 100%;
 }
 
 .scene3__facts2 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
   z-index: 1;
-  width: min(80%, 60ch);
-  padding: var(--space-2xs);
-  border: 2px solid black;
-  text-align: center;
-  background-color: rgba(255, 255, 255, 0.95);
-  transform: translate(-50%, -50%);
 }
 
 /* SCENE 4 */
@@ -263,18 +237,7 @@
 }
 
 .scene4__text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 17ch;
-  padding: var(--space-2xs);
-  font-size: var(--step-0);
-  line-height: 1.3;
-  text-align: center;
-  color: black;
-  background-color: rgba(255, 255, 255, 0.8);
-  border-radius: var(--space-2xs);
-  transform: translate(-50%, -50%);
+  width: 15ch;
 }
 
 #congrats {
@@ -298,6 +261,7 @@
     transform: translateX(-50%) rotate(360deg);
   }
 }
+/* Ending */
 .final-words {
   background: #0a97d9;
   color: white;
@@ -335,18 +299,6 @@
 #svg-gif img {
   max-width: 30vw;
   margin-block-start: 10vh;
-}
-
-/* UTILITY CLASSES */
-.hidden {
-  opacity: 0;
-}
-
-.highlight {
-  background-color: red;
-  color: white;
-  padding: var(--space-3xs);
-  font-weight: bold;
 }
 
 /* MEDIA QUERIES *//*# sourceMappingURL=style.css.map */
