@@ -1,5 +1,6 @@
 gsap.registerPlugin(ScrollTrigger); //tell GSAP we want to use scrollTrigger plugin
 
+/* SCENE2 (not timeline related) */
 gsap.from(".scene1__text", { //target, animate from -> to its original position
   y: "-100vh",  //start above viewport
   duration: 3,  //adjusts duration
@@ -19,6 +20,7 @@ gsap.to([
     ease: "sine.inOut"
 });
 
+/* SCENE3 (not timeline related) */
 gsap.to("#depth3__fin", {
   rotation: 10, //wiggle degrees
   transformOrigin: "left center", //wiggle pivot points
@@ -27,6 +29,79 @@ gsap.to("#depth3__fin", {
   duration: 1,
   ease: "power1.inOut", //smooth movement
 });
+
+/* SCENE4 (not timeline related) */
+// Animating the brows of our characters scene4
+const brows = [
+  document.querySelector("#_4-guy-brows"),
+  document.querySelector("#_4-gal-brows")
+];
+
+// GSAP animation running once when hovered over
+const browsAnim = gsap.to(brows, {
+  y: -5,
+  duration: 0.5,
+  yoyo: true,
+  repeat: 1,
+  ease: "sine.inOut",
+  paused: true
+});
+
+const guy = document.querySelector("#_4-guy"); 
+guy.addEventListener('mouseenter', () => {
+  browsAnim.restart(); 
+});
+
+const gal = document.querySelector("#_4-gal"); 
+gal.addEventListener('mouseenter', () => {
+  browsAnim.restart(); 
+});
+
+// Making the rubbish disappear when clicked
+document.querySelectorAll("#_4-bottle-wave-2, #_4-cup-wave, #_4-plastic-bag, #_4-bottle-wave-1").forEach(item => {
+  item.addEventListener('click', function() {
+    item.style.transition = 'opacity 0.5s ease-out';  // Gradient
+    item.style.opacity = 0;  // Starts the fade effect
+    setTimeout(() => item.style.display = 'none', 500);  // Removes elements after fade effect
+  });
+});
+
+// Popup message after all rubbish is removed
+const trashItems = document.querySelectorAll('.rubbish');
+const totalTrash = trashItems.length;
+let trashRemoved = 0;
+
+trashItems.forEach(item => {
+  item.addEventListener('click', () => {
+    // Remove rubbish
+    item.style.transition = 'opacity 0.5s ease';
+    item.style.opacity = 0;
+    setTimeout(() => {
+      item.style.display = 'none';
+      trashRemoved++;
+
+      // Check that everything is removed
+      if (trashRemoved === totalTrash) {
+        document.getElementById('congrats');
+        congrats.style.display = 'block';
+        congrats.classList.add('spin');
+      }
+    }, 500);
+  });
+});
+
+/* Source for instructions on .scene4__text to dissappear ChatGPT */
+let textRemoved = false;
+
+document.querySelectorAll(".rubbish").forEach(item => {
+  item.addEventListener('click', () => {
+    if (!textRemoved) {
+      document.querySelector('.scene4__text').style.display = 'none';
+      textRemoved = true;
+    }
+  });
+});
+
 
 /* Timeline scene 1-2 */
 let tl = gsap.timeline({ //create timeline (tl)
@@ -99,7 +174,7 @@ tl.to(".scene1", {
 
 tl.set(".scene1", {
   display: "none",
-}, 7); // after fade completes
+}, 7); //after fade completes to not disturb further in the story, not neccesary i think tho..
 
 tl.to(".scene2", {
   opacity: 1,
@@ -129,7 +204,7 @@ tl.to({}, { //no target, just a pause when combined with "duration: 2"
   duration: 1, //add a pause so text stops a bit before scrolling further
 }, 10);
 
-/* Timeline scene 3 */
+/* Timeline scene 3 depth 1-2 */
 let tl2 = gsap.timeline({
   scrollTrigger: {  
     trigger: "#scene3__depth1",
@@ -146,6 +221,7 @@ tl2.to("#depth__bubble", {
   ease: "power1.inOut", // fast → slow → fast
 }, 0);            // start immediately at time 0
 
+/* Timeline scene 3 depth 3 */
 let tl3 = gsap.timeline({
   scrollTrigger: {  
     trigger: "#scene3__depth3",
@@ -170,6 +246,11 @@ tl3.from("#depth3__sand", {
   y: "100%",
   duration: 2,
 }, 0.5);
+
+tl3.from("#depth3__trash", {
+  opacity: 0,
+  duration: 2,
+}, 1.5);
 
 tl3.from("#depth3__algae1", {
   y: "110%",
@@ -217,3 +298,20 @@ tl3.to("#scene3__depth3", {
   duration: 3,
   ease: "power2.in", // smooth zoom
 }, 12.4);
+
+tl3.to("#scene3__depth3", {
+ opacity: 0,
+ duration: 1,
+}, 15);
+
+/* SCENE4 */
+/* Timeline scene 4 */
+let tl4 = gsap.timeline({
+   scrollTrigger: {  
+     trigger: ".scene4",
+     start: "top top", 
+     end: "+=1000", 
+     pin: true,
+     scrub: true,
+   }
+ });
