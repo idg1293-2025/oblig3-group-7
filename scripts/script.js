@@ -172,10 +172,6 @@ tl.to(".scene1", {
   ease: "power2.out",
 }, 5);
 
-tl.set(".scene1", {
-  display: "none",
-}, 7); //after fade completes to not disturb further in the story, not neccesary i think tho..
-
 tl.to(".scene2", {
   opacity: 1,
   duration: 2,
