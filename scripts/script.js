@@ -315,3 +315,18 @@ let tl4 = gsap.timeline({
      scrub: true,
    }
  });
+
+// The final words
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("show");
+    } else {
+      entry.target.classList.remove("show");
+    }
+  });
+}, {
+  threshold: 0.3
+});
+
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
