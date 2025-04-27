@@ -213,6 +213,10 @@
   width: 100%;
 }
 
+.scene3__facts2 {
+  z-index: 1;
+}
+
 /* SCENE 4 */
 .scene4 {
   height: 100vh;
