@@ -2,6 +2,7 @@
 [![Open in Codespaces](https://classroom.github.com/assets/launch-codespace-2972f46106e565e64193e422d61a12cf1da4916b45550586e14ef0a7c637dd04.svg)](https://classroom.github.com/open-in-codespaces?assignment_repo_id=19216546)
 
 # About our project
+For this project we take the user throught a story about the lazy 
 
 ## Project overview/ purpose
 The purpose of our project is to raise awareness around **Goal 14: Life Below Water**. We combine the facts about plastic pollution and its effects on marine life with a compelling story about our everyday choices and the impacts they may have on our environment. 
