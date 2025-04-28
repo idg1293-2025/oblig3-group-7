@@ -1,0 +1,10 @@
+.hidden {
+  opacity: 0;
+}
+
+.highlight {
+  background-color: red;
+  color: white;
+  padding: var(--space-3xs);
+  font-weight: bold;
+}/*# sourceMappingURL=utilities.css.map */

@@ -1,0 +1,23 @@
+/* MEDIA QUERIES */
+@media (prefers-reduced-motion: reduce) {
+    #scene1__wave1,
+    #scene1__wave2,
+    #scene1__wave3,
+    #scene1__wave4,
+    #scene1__wave5,
+    #scene2__bottle1,
+    #scene2__bottle2,
+    #scene2__plasticbag1,
+    #scene2__plasticbag2,
+    #scene2__net,
+    #scene2__cup,
+    #scene2__litter1,
+    #scene2__litter2,
+    #depth3__trash,
+    #depth3__fin,
+    .fade-in,
+    {
+        animation: none; //stop animation of targeted elements in reduced motion mode
+        transition: none; //stop fade in final words
+    }
+}
