@@ -17,7 +17,7 @@ body {
 * {
   font-family: "Fredoka", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 500;
+  font-weight: 300;
   font-style: normal;
   font-variation-settings: "wdth" 100;
 }
@@ -46,12 +46,14 @@ body {
 }
 .intro__title {
   font-size: 3rem;
+  font-weight: 500;
   color: #fff;
   margin-bottom: 1rem;
 }
 .intro__subtitle {
   font-size: 1.5rem;
   color: #f0f8ff;
+  text-align: center;
 }
 
 .story {
@@ -62,7 +64,7 @@ body {
   justify-content: center;
   align-items: center;
   padding: 4rem 2rem;
-  opacity: 1; /* <-- changed */
+  opacity: 1;
   transform: translateY(0); /* <-- changed */
   z-index: 1000;
 }
@@ -70,9 +72,9 @@ body {
   max-width: 600px;
   text-align: center;
 }
-.story__title {
-  font-size: 2.5rem;
-  margin-bottom: 1.5rem;
+.story__info {
+  font-size: 1.5rem;
+  margin-top: 2rem;
   color: #0077b6;
 }
 .story__text {
@@ -349,6 +351,76 @@ body {
   margin-block-start: 10vh;
 }
 
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem 2rem;
+  background-color: #00509e;
+  color: white;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.footer__logo {
+  max-width: 120px;
+  width: 5%;
+  height: auto;
+}
+.footer__container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.footer__container__text {
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.footer__container__text .footer__info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  align-items: center;
+}
+.footer__container__text .footer__info h4, .footer__container__text .footer__info address, .footer__container__text .footer__info p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+.footer__container__text .footer__info a {
+  color: #ffffff;
+  text-decoration: underline;
+}
+.footer__container__text .footer__info a:hover {
+  text-decoration: none;
+}
+.footer__container__text .footer__description p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+.footer__container__text .footer__description p a {
+  color: #ffffff;
+  text-decoration: underline;
+}
+.footer__container__text .footer__description p a:hover {
+  text-decoration: none;
+}
+.footer__arrow {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  max-width: 40px;
+  height: auto;
+  z-index: 1000;
+  transition: transform 0.3s ease;
+}
+.footer__arrow:hover {
+  transform: translateY(-5px);
+}
+
 .hidden {
   opacity: 0;
 }
@@ -357,7 +429,7 @@ body {
   background-color: red;
   color: white;
   padding: var(--space-3xs);
-  font-weight: bold;
+  font-weight: 500;
 }
 
 @keyframes wave {

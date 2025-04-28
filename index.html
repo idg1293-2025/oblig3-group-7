@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/main.css">
-    <title>Scrollytelling | SDG 14: Life Below Water</title>
+    <title>Scrollytelling | <abbr title="Sustainable Development Goals">SDG</abbr> 14: Life Below Water</title>
     <!-- 1. GSAP core -->
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js" defer></script>
     <!-- 2. ScrollTrigger plugin -->
@@ -14,25 +14,27 @@
 </head>
 <body>
   <main>
-    <section class="intro">
+    <section class="intro" id="top">
       <div class="intro__content">
-        <h1 class="intro__title">Welcome to our story</h1>
+        <h1 class="intro__title">The World is a Mess — Let's Fix It!</h1>
         <p class="intro__subtitle">As part of <a href="https://www.ntnu.no/studier/emner/IDG1293#tab=omEmnet" target="_blank">IDG1293 Advanced CSS</a>
-        we have created a story focusing on the <abbr title="United Nations">UNs</abbr> <abbr title="Sustainable Development Goals">SDG</abbr> goal 14</p>
+        we have created a story focusing on the <abbr title="United Nations">UNs</abbr> <abbr title="Sustainable Development Goals">
+        <abbr title="Sustainable Development Goals">SDG</abbr></abbr> goal 14. Now we are going to tell you this story throught the screen.</p>
       </div>
     </section>
   
     <section class="story" id="story">
       <div class="story__content">
-        <h2 class="story__title">The Importance of SDG 14</h2>
         <p class="story__text">
           Welcome to a journey that plunges you deep into the heart of our oceans, where the fate of marine life is hanging by a thread. 
-          SDG Goal 14, "Life Below Water," is our call to action to protect the seas from pollution, overfishing, and climate change.
+          <a href="https://SDGs.un.org/goals/goal14" target="_blank"><abbr title="Sustainable Development Goals">SDG</abbr> Goal 14</a>, "Life Below Water," is our call to action to protect the seas from pollution, overfishing, and climate change.
           But here’s the twist – we’re not just talking about the crisis. We’re about to take you on an interactive adventure! 
-          Through the magic of scroll-telling, dynamic design, and animated storytelling, we’re bringing the message of SDG 14 to life in 
+          Through the magic of scroll-telling, dynamic design, and animated storytelling, we’re bringing the message of <abbr title="Sustainable Development Goals"><abbr title="Sustainable Development Goals">SDG</abbr></abbr> 14 to life in 
           a way that grabs attention, sparks action, and hopefully sparks the interest. This isn’t just about writing code — it’s about making waves, 
           raising awareness, and showing the world how powerful we can be when we join forces to protect our oceans. Ready to dive in? Let’s make 
-          some noise for the oceans!        </p>
+          some noise for the oceans!</p>
+
+          <h2 class="story__info">Using a smaller screen? Rotate for a better user experience!</h2>
       </div>
     </section>
 
@@ -451,7 +453,7 @@
           </div>
           <div id="last-half">
               <p>Want to learn more?</p>
-              <p>Check out the UN's Sustainable Development Goal 14: <a href="https://sdgs.un.org/goals/goal14" target="_blank">Life Below Water!</a></p>
+              <p>Check out the UN's Sustainable Development Goal 14: <a href="https://SDGs.un.org/goals/goal14" target="_blank">Life Below Water!</a></p>
           </div>
       </div>
       <div id="svg-gif" class="fade-in">
@@ -462,6 +464,44 @@
       </div>
   </section>
   </main>
+
+  <footer class="footer">
+    <img
+      src="./img/NTNU hovedlogo - hvit - hoyde.svg"
+      alt="NTNU Logo"
+      title="NTNU Logo"
+      loading="lazy"
+      class="footer__logo"
+    />
+    
+    <div class="footer__container">
+      <div class="footer__container__text">
+        <div class="footer__info">
+          <h4>CONTACT US</h4>
+          <address>Address: Raufossvegen 40, 2821 Gjøvik</address>
+          <p>Telephone: <a href="tel:61135400">61 13 54 00</a></p>
+        </div>
+        
+        <div class="footer__description">
+          <p>
+            This page was created as part of the subject
+            <a href="https://www.ntnu.no/studier/emner/IDG1293#tab=omEmnet" target="_blank">IDG1293</a>
+            of the design department by Marte Cecilie Kaland, Emilie Dyrvik Homlong and Adri Malvuk, students from BWU
+          </p>
+        </div>
+      </div>
+    </div>
+  
+    <a href="#top">
+      <img
+        src="./img/arrow_upward_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24-kopi.png"
+        alt="arrow upward"
+        title="arrow upward"
+        class="footer__arrow"
+      />
+    </a>
+  </footer>
+  
 </body>
 </html>
 
