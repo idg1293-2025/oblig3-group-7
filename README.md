@@ -2,7 +2,6 @@
 [![Open in Codespaces](https://classroom.github.com/assets/launch-codespace-2972f46106e565e64193e422d61a12cf1da4916b45550586e14ef0a7c637dd04.svg)](https://classroom.github.com/open-in-codespaces?assignment_repo_id=19216546)
 
 # About our project
-For this project we take the user throught a story about the lazy 
 
 ## Project overview/ purpose
 The purpose of our project is to raise awareness around **Goal 14: Life Below Water**. We combine the facts about plastic pollution and its effects on marine life with a compelling story about our everyday choices and the impacts they may have on our environment. 
@@ -14,9 +13,10 @@ We were discussing different SDG Goals and we were coming up with storytelling i
 The storyboard was made using hand-drawings and handwritten text on a sheet of paper that had a template printed on it. Our storyboard depicts all four scenes of our story. We follow the two main characters (boy and girl) who are spending some time of their day on the beach. They stumble upon a bottle, but they don't care. After being informed about the serious consequences that plastic pollution has on sea creatures, they change their mindset and decide to do good by tidying up the beach.
 Check the img folder to find storyboard.jpeg.
 
-## Getting started/ instructions
-
-## Github Pages
+## Getting started instructions & Github Pages link
+To view our project, open the link to our GitHub Pages site:
+The page supports reduced motion settings for accessibility.
+For a better experience on mobile, we recommend turning the screen horizontally.
 
 ## Technology stack - animations, interactions and observers
 - HTML for structure.
