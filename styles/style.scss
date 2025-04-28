@@ -19,14 +19,17 @@
     --space-2xs: clamp(1rem, 0.9079rem + 0.4211vw, 1.25rem);
     --space-xs: clamp(1.5rem, 1.3618rem + 0.6316vw, 1.875rem);
     --space-s: clamp(2rem, 1.8158rem + 0.8421vw, 2.5rem);
-
-    background-color: beige;
 }
 
 /* GLOBAL */
+html, body {
+    overflow-x: hidden; //stops horizontal scroll caused by animations moving elements outside of the screen
+}
+body {
+    background-color: beige;
+}
 //Fredoka font from Google Fonts
 @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
-
 * {
     font-family: "Fredoka", sans-serif;
     font-optical-sizing: auto;
@@ -213,6 +216,7 @@
         bottom: 0;
         left: 0;
         width: 100%;
+        animation-duration: 7s; //slows down animation
     }
     #depth3__fish {
         position: absolute;
