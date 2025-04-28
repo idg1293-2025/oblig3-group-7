@@ -7,28 +7,15 @@ gsap.from(".scene1__text", { //target, animate from -> to its original position
   ease: "power2.out",  //fast -> slow smooth stop
 });
 
-gsap.to([
-  "#scene1__wave1",
-  "#scene1__wave2",
-  "#scene1__wave3",
-  "#scene1__wave4",
-  "#scene1__wave5"], { //targeted elememts
-    y: -18,
-    duration: 1.5,
-    repeat: -1,
-    yoyo: true,
-    ease: "sine.inOut"
-});
-
-/* SCENE3 (not timeline related) */
-gsap.to("#depth3__fin", {
-  rotation: 10, //wiggle degrees
-  transformOrigin: "left center", //wiggle pivot points
-  yoyo: true, //go back and forth
-  repeat: -1, //infinite loop
-  duration: 1,
-  ease: "power1.inOut", //smooth movement
-});
+// /* SCENE3 (not timeline related) */
+// gsap.to("#depth3__fin", {
+//   rotation: 10, //wiggle degrees
+//   transformOrigin: "left center", //wiggle pivot points
+//   yoyo: true, //go back and forth
+//   repeat: -1, //infinite loop
+//   duration: 1,
+//   ease: "power1.inOut", //smooth movement
+// });
 
 /* SCENE4 (not timeline related) */
 // Animating the brows of our characters scene4
