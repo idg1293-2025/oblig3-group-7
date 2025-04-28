@@ -494,13 +494,14 @@ body {
     text-align: center;
     padding: 2rem 1rem;
   }
-  .footer__container {
-    margin-top: 1rem;
+  .footer__logo {
+    width: 20%;
   }
-  .footer__container__text {
+  .footer__text {
+    margin-top: 1rem;
     max-width: 90%;
   }
-  .footer__container .footer__info {
+  .footer__text__info {
     flex-direction: column;
     gap: 0.5rem;
   }

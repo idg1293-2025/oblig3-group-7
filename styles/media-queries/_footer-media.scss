@@ -4,15 +4,16 @@
       align-items: center;
       text-align: center;
       padding: 2rem 1rem;
+
+      &__logo {
+        width: 20%;
+      }
   
-      &__container {
+      &__text {
         margin-top: 1rem;
-        
-        &__text {
           max-width: 90%;
-        }
   
-        .footer__info {
+        &__info {
           flex-direction: column;
           gap: 0.5rem;
         }
