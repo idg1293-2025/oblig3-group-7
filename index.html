@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/main.css">
     <title>Scrollytelling | SDG 14: Life Below Water</title>
     <!-- 1. GSAP core -->
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js" defer></script>
@@ -212,20 +212,20 @@
     <!-- Scene 3: Impact below -->
       <!-- Depth 1 -->
       <div class="scene3__depth" id="scene3__depth1">
-        <img src="./img/bubbles-01.svg" alt="Bubble" id="depth__bubble">
-        <img src="./img/bubbles-01.svg" alt="Bubble" id="depth__bubble">
-        <img src="./img/bubbles-01.svg" alt="Bubble" id="depth__bubble">
-        <img src="./img/bubbles-01.svg" alt="Bubble" id="depth__bubble">
+        <img src="./img/bubbles-01.svg" alt="Bubble" id="depth__bubble" loading="lazy">
+        <img src="./img/bubbles-01.svg" alt="Bubble" id="depth__bubble" loading="lazy">
+        <img src="./img/bubbles-01.svg" alt="Bubble" id="depth__bubble" loading="lazy">
+        <img src="./img/bubbles-01.svg" alt="Bubble" id="depth__bubble" loading="lazy">
         <div class="scene3__facts1 fact-box">
           <p>Around 80% of the trash in our oceans is plastic, harming sea life from the surface to the deep ocean.</p>
         </div>
       </div>
       <!-- Depth 2 -->
       <div class="scene3__depth" id="scene3__depth2">
-        <img src="./img/bubbles-01.svg" alt="Bubble" id="depth__bubble">
-        <img src="./img/bubbles-01.svg" alt="Bubble" id="depth__bubble">
-        <img src="./img/bubbles-01.svg" alt="Bubble" id="depth__bubble">
-        <img src="./img/bubbles-01.svg" alt="Bubble" id="depth__bubble">
+        <img src="./img/bubbles-01.svg" alt="Bubble" id="depth__bubble" loading="lazy">
+        <img src="./img/bubbles-01.svg" alt="Bubble" id="depth__bubble" loading="lazy">
+        <img src="./img/bubbles-01.svg" alt="Bubble" id="depth__bubble" loading="lazy">
+        <img src="./img/bubbles-01.svg" alt="Bubble" id="depth__bubble" loading="lazy">
       </div>
       <!-- Depth 3 -->
       <div class="scene3__depth" id="scene3__depth3">
@@ -293,7 +293,7 @@
           </g>
         </svg>
 
-        <img src="./img/deep-trash-01.svg" alt="A plastic bag and piece of trash deep in the ocean." class="float" id="depth3__trash">
+        <img src="./img/deep-trash-01.svg" alt="A plastic bag and piece of trash deep in the ocean." class="float" id="depth3__trash" loading="lazy">
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3365.59 1596.6" id="depth3__fish">
           <title>Illustration of a fish stuck in a bottle.</title>
@@ -404,10 +404,10 @@
               </g>
           </g>
           <!-- Sparkles -->
-          <image id="sparkle1" class="sparkle" href="img/sparkle.svg" x="0" y="0" Width:"100" height="100" visibility="hidden" />
-          <image id="sparkle2" class="sparkle" href="img/sparkle.svg" x="0" y="0" Width:"100" height="100" visibility="hidden" />
-          <image id="sparkle3" class="sparkle" href="img/sparkle.svg" x="0" y="0" Width:"100" height="100" visibility="hidden" />
-          <image id="sparkle4" class="sparkle" href="img/sparkle.svg" x="0" y="0" Width:"100" height="100" visibility="hidden" />
+          <image id="sparkle1" class="sparkle" href="img/sparkle.svg" x="0" y="0" Width:"100" height="100" visibility="hidden" loading="lazy"/>
+          <image id="sparkle2" class="sparkle" href="img/sparkle.svg" x="0" y="0" Width:"100" height="100" visibility="hidden" loading="lazy"/>
+          <image id="sparkle3" class="sparkle" href="img/sparkle.svg" x="0" y="0" Width:"100" height="100" visibility="hidden" loading="lazy"/>
+          <image id="sparkle4" class="sparkle" href="img/sparkle.svg" x="0" y="0" Width:"100" height="100" visibility="hidden" loading="lazy"/>
           </svg>
           
       </div>
@@ -431,7 +431,7 @@
       </div>
       <div id="svg-gif" class="fade-in">
           <picture> <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/picture -->
-            <source srcset="img/goal-14.png" media="(prefers-reduced-motion: reduce)">
+            <source srcset="img/goal-14.png" media="(prefers-reduced-motion: reduce)" loading="lazy">
             <img src="img/E_GIF_14.gif" alt="Goal 14 GIF" loading="lazy">
           </picture>
       </div>
