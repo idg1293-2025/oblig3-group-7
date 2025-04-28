@@ -18,4 +18,8 @@ Check the img folder to find storyboard.jpeg.
 ## Github Pages
 
 ## Technology stack - animations, interactions and observers
-GSAP animation through JS, and using IntersectionObserver to make the scrollytelling effects. CSS animations such as keyframes. SVG animations using animateTransform. 
+- HTML for structure.
+- CSS for styling and animations such as keyframes for simple animations. 
+- GSAP for more fancy animations through JS, and using scrollTrigger, timelines, and IntersectionObserver to make the scrollytelling effects.
+- SVG animations using animateTransform. 
+- Github pages for deploying the page.
