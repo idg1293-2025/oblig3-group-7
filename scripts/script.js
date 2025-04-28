@@ -336,3 +336,21 @@ const observer = new IntersectionObserver((entries) => {
 });
 
 document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+// Show arrow when user has scrolled
+window.addEventListener('scroll', () => {
+  const scrollBtn = document.getElementById('scrollToTop');
+  if (window.scrollY > 300) {
+    scrollBtn.style.display = 'block';
+  } else {
+    scrollBtn.style.display = 'none';
+  }
+});
+
+// Scroll to top when you click on the arrow
+document.getElementById('scrollToTop').addEventListener('click', () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+});
