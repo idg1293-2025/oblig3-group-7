@@ -1,25 +1,6 @@
-// Base
-@import 'base/reset';
-@import 'base/global';
-@import 'base/typography';
-@import 'base/variables';
-
-// Layout
-@import 'layout/scene1';
-@import 'layout/scene2';
-@import 'layout/scene3';
-@import 'layout/scene4';
-@import 'layout/stage';
-
-// Components
-@import 'components/box';
-@import 'components/final-words';
-
-// Utilities
-@import 'utilities/utilities';
-
-// Animations
-@import 'animations/keyframes';
-
-// Media Queries
-@import 'media-queries/reduced-motion';
+@use "animations";
+@use "base";
+@use "components";
+@use "layout";
+@use "media-queries";
+@use "utilities";
