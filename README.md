@@ -18,6 +18,8 @@ To view our project, open the link to our GitHub Pages site:
 The page supports reduced motion settings for accessibility.
 For a better experience on mobile, we recommend turning the screen horizontally.
 
+**Github Pages:** https://idg1293-2025.github.io/oblig3-group-7/
+
 ## Technology stack - animations, interactions and observers
 - HTML for structure.
 - CSS for styling and animations such as keyframes for simple animations. 
