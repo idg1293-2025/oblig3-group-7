@@ -1,3 +1,4 @@
+/* VARIABLES */
 .hidden {
   opacity: 0;
 }
@@ -5,7 +6,7 @@
 .highlight {
   background-color: red;
   color: white;
-  padding: var(--space-3xs);
+  padding: clamp(0.5rem, 0.4539rem + 0.2105vw, 0.625rem);
   font-weight: 600;
 }
 
