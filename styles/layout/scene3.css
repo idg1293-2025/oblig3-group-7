@@ -1,0 +1,101 @@
+/* SCENE 3 */
+.scene3__depth {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  transition: background 0.5s ease;
+}
+
+#scene3__depth1 {
+  background: linear-gradient(to bottom, #98e9f4, #005577);
+}
+
+#scene3__depth2 {
+  background: linear-gradient(to bottom, #005577, #003344);
+}
+
+#scene3__depth3 {
+  background: linear-gradient(to bottom, #003344, #000a13);
+}
+
+#depth__bubble {
+  width: 100%;
+  height: auto;
+}
+
+#depth3__turtle {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+#scene3__svg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+}
+
+#depth3__trash {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  animation-duration: 7s;
+}
+
+#depth3__fish {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.scene3__facts2 {
+  z-index: 1;
+}
+
+/* SCENE 4 */
+.scene4 {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+
+.svg-container {
+  width: 100%;
+  height: 100%;
+}
+
+.scene4__svg {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  bottom: 0;
+}
+
+.scene4__text {
+  width: 15ch;
+}
+
+#gal_garbage-bag {
+  transform-origin: center top;
+}
+#gal_garbage-bag:hover {
+  animation: swing 0.6s ease-in-out 1;
+}
+
+#congrats {
+  display: none;
+  position: absolute;
+  inset-block-start: 20%;
+  inset-inline-start: 50%;
+  transform: translateX(-50%);
+  font-size: 2rem;
+  color: green;
+}
+#congrats.spin {
+  animation: spinOnce 1s ease-out forwards;
+}/*# sourceMappingURL=scene3.css.map */
