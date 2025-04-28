@@ -92,6 +92,37 @@
   bottom: 0;
 }
 
+@keyframes wave {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.wave {
+  animation: wave 2s ease-in-out infinite;
+}
+
+#scene1__wave2 {
+  animation-delay: 0.5s;
+}
+
+#scene1__wave3 {
+  animation-delay: 1s;
+}
+
+#scene1__wave4 {
+  animation-delay: 1.5s;
+}
+
+#scene1__wave5 {
+  animation-delay: 2s;
+}
+
 /* SCENE 2 */
 .scene2 {
   height: 100%;
@@ -113,7 +144,7 @@
 }
 
 #scene2__net, #scene2__cup, #scene2__litter1, #scene2__litter2, #scene2__plasticbag2, #scene2__bottle1, #scene2__bottle2, #scene2__plasticbag1, .float {
-  animation: float 6s infinite ease-in-out;
+  animation: float 3s infinite ease-in-out;
 }
 
 #scene2__net {
@@ -215,6 +246,22 @@
 
 .scene3__facts2 {
   z-index: 1;
+}
+
+@keyframes wiggle {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(-0.25deg);
+    transform-origin: right bottom;
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+#depth3__fin {
+  animation: wiggle 2s ease-in-out infinite;
 }
 
 /* SCENE 4 */
@@ -325,4 +372,25 @@
   margin-block-start: 10vh;
 }
 
-/* MEDIA QUERIES *//*# sourceMappingURL=style.css.map */
+/* MEDIA QUERIES */
+@media (prefers-reduced-motion: reduce) {
+  #scene1__wave1,
+  #scene1__wave2,
+  #scene1__wave3,
+  #scene1__wave4,
+  #scene1__wave5,
+  #scene2__bottle1,
+  #scene2__bottle2,
+  #scene2__plasticbag1,
+  #scene2__plasticbag2,
+  #scene2__net,
+  #scene2__cup,
+  #scene2__litter1,
+  #scene2__litter2,
+  #depth3__trash,
+  #depth3__fin,
+  .fade-in {
+    animation: none;
+    transition: none;
+  }
+}/*# sourceMappingURL=style.css.map */
