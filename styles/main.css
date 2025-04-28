@@ -237,15 +237,17 @@ body {
   padding: 2rem;
 }
 .intro__title {
-  font-size: 3rem;
+  font-size: clamp(2.4rem, 2.1329rem + 1.2211vw, 3.125rem);
   font-weight: 500;
   color: #fff;
   margin-bottom: 1rem;
 }
 .intro__subtitle {
-  font-size: 1.5rem;
+  font-size: clamp(1.6667rem, 1.5439rem + 0.5614vw, 2rem);
   color: #f0f8ff;
   text-align: center;
+  width: min(95%, 60ch);
+  margin-inline: auto;
 }
 
 .story {
@@ -265,12 +267,12 @@ body {
   text-align: center;
 }
 .story__info {
-  font-size: 1.5rem;
+  font-size: clamp(2rem, 1.8158rem + 0.8421vw, 2.5rem);
   margin-top: 2rem;
   color: #0077b6;
 }
 .story__text {
-  font-size: 1.2rem;
+  font-size: clamp(1.3889rem, 1.3111rem + 0.3556vw, 1.6rem);
   line-height: 1.6;
 }
 
