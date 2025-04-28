@@ -7,15 +7,11 @@ gsap.from(".scene1__text", { //target, animate from -> to its original position
   ease: "power2.out",  //fast -> slow smooth stop
 });
 
-// /* SCENE3 (not timeline related) */
-// gsap.to("#depth3__fin", {
-//   rotation: 10, //wiggle degrees
-//   transformOrigin: "left center", //wiggle pivot points
-//   yoyo: true, //go back and forth
-//   repeat: -1, //infinite loop
-//   duration: 1,
-//   ease: "power1.inOut", //smooth movement
-// });
+/* SCENE 3 */
+//Borrowed this code from ChatGPT
+if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  document.querySelectorAll('animateTransform').forEach(anim => anim.remove());
+}
 
 /* SCENE4 (not timeline related) */
 // Animating the brows of our characters scene4
@@ -105,7 +101,7 @@ trashItems.forEach(item => {
   });
 });
 
-/* Source for instructions on .scene4__text to dissappear ChatGPT */
+/* Borrowed instructions on .scene4__text to dissappear from ChatGPT */
 let textRemoved = false;
 
 document.querySelectorAll(".rubbish").forEach(item => {
@@ -116,7 +112,6 @@ document.querySelectorAll(".rubbish").forEach(item => {
     }
   });
 });
-
 
 /* Timeline scene 1-2 */
 let tl = gsap.timeline({ //create timeline (tl)
