@@ -131,7 +131,7 @@ let tl = gsap.timeline({ //create timeline (tl)
 
 tl.to(".scene1__text", { //add animation to the timeline (tl), start from the current value of element (to), targets element being animated
   scale: 0, //shrink the text to nothing
-  duration: 0.5, //define scroll distance of animation
+  duration: 2, //define scroll distance of animation
   ease: "back.in(2)", //predefined easing type (how an animation accelerates or decelerates) from the GSAP library, number indicates how much it zooms
 }, 0); //tells GSAP to start animation at the time 0 in the timeline (immediately)
 
