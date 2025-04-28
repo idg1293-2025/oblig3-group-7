@@ -1,7 +1,0 @@
-/* MEDIA QUERIES */
-@media (prefers-reduced-motion: reduce) {
-  .reduced-motion {
-    animation: none !important;
-    transition: none !important;
-  }
-}/*# sourceMappingURL=reduced-motion.css.map */
