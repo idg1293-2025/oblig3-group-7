@@ -1,0 +1,44 @@
+.intro {
+  height: 100vh;
+  background: linear-gradient(to bottom, #0077b6, #caf0f8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+}
+.intro__title {
+  font-size: 3rem;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+.intro__subtitle {
+  font-size: 1.5rem;
+  color: #f0f8ff;
+}
+
+.story {
+  background: linear-gradient(to bottom, #caf0f8, beige);
+  min-height: 100vh;
+  background-color: #0c4576;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 2rem;
+  opacity: 1; /* <-- changed */
+  transform: translateY(0); /* <-- changed */
+  z-index: 1000;
+}
+.story__content {
+  max-width: 600px;
+  text-align: center;
+}
+.story__title {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: #0077b6;
+}
+.story__text {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}/*# sourceMappingURL=intro.css.map */
