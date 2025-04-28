@@ -319,6 +319,10 @@ body {
   font-weight: 600;
 }
 
+.blur {
+  filter: blur(4px);
+}
+
 @keyframes wave {
   0% {
     transform: translateY(0);
